@@ -1,0 +1,4 @@
+# Bloqueia o acesso ao arquivo .env pelo navegador
+<Files ".env">
+    Require all denied
+</Files>
