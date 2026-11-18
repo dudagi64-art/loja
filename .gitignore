@@ -1,0 +1,9 @@
+# Senhas reais do banco de dados (NUNCA vão pro GitHub)
+.env
+
+# Arquivos que o Windows cria sozinho
+Thumbs.db
+desktop.ini
+
+# Configurações do VS Code
+.vscode/
