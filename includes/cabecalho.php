@@ -21,7 +21,12 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="carrinho.php">Carrinho</a></li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="carrinho.php">
+                            Carrinho
+                            <span class="badge bg-success"><?= array_sum($_SESSION['carrinho'] ?? []) ?></span>
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
                 </ul>
             </div>

@@ -1,5 +1,15 @@
-<?php
 
+<?php
+// =========================================================
+// conexao.php
+// 1) Inicia a sessão (carrinho e login ficam guardados nela)
+// 2) Lê as configurações do arquivo .env
+// 3) Conecta no banco de dados usando PDO
+// =========================================================
+
+session_start();
+
+$caminhoEnv = __DIR__ . '/../.env';
 
 $caminhoEnv = __DIR__ . '/../.env';
 
