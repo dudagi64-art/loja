@@ -27,7 +27,17 @@
                             <span class="badge bg-success"><?= array_sum($_SESSION['carrinho'] ?? []) ?></span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
+                                       <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['perfil'] === 'admin'): ?>
+                        <li class="nav-item"><a class="nav-link text-warning" href="admin/index.php">Painel admin</a></li>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['usuario'])): ?>
+                        <li class="nav-item">
+                            <span class="nav-link text-white">Olá, <?= htmlspecialchars($_SESSION['usuario']['nome']) ?></span>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Sair</a></li>
+                    <?php else: ?>
+                        <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
