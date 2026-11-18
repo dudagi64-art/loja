@@ -1,0 +1,18 @@
+body {
+    background-color: #f5f6f8;
+}
+
+/* Todas as fotos dos produtos com o mesmo tamanho, sem esticar */
+.foto-produto {
+    height: 180px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* Quadro cinza para quando o produto ainda não tem foto */
+.sem-foto {
+    height: 180px;
+    background-color: #e9ecef;
+    color: #6c757d;
+}
